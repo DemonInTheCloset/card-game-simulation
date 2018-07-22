@@ -1,10 +1,12 @@
 from random import shuffle
 import sys
 
+## Print function to use the \r character, useful for printing progress bars and progress percentages
 def writeInLine(string):
 	sys.stdout.write("\r" + str(string))
 	sys.stdout.flush()
 
+## Card Pile class (FIFO list) 
 class Pile
 	## Initialize object
 	def __init__(self,cards):
@@ -50,6 +52,7 @@ class Pile
 		else:
 			raise PileNotEmpty("The pile wasn't empty when it tried to be modified")
 
+## Player Class
 class Player
 	def __init__(self, cards):
 		if len(cards) < 28:
